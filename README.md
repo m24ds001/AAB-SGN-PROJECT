@@ -33,7 +33,7 @@ AAB-SGN is a novel framework for robust deep learning under label noise that emb
 ### Install from source
 
 ```bash
-git clone https://github.com/[your-org]/AAB-SGN.git
+git clone https://github.com/m24ds001/AAB-SGN-PROJECT
 cd AAB-SGN
 pip install -r requirements.txt
 pip install -e .
