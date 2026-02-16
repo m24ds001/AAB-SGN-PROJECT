@@ -1,0 +1,50 @@
+# configs/cifar10_40pct.yaml
+# Complete configuration reproducing Table 6 (main paper)
+# AAB-SGN, CIFAR-10, 40% symmetric noise, 5 seeds
+
+experiment:
+  name:        "cifar10_sym_40pct"
+  seeds:       [0, 42, 123, 456, 789]
+  description: "Reproduces Table 6: Standalone AAB 93.85±0.52%, AAB-SGN 94.23±0.45%"
+
+data:
+  dataset:     "cifar10"
+  noise_type:  "symmetric"
+  noise_rate:  0.40
+  batch_size:  128
+  num_workers: 4
+  data_root:   "./data"
+
+model:
+  architecture: "resnet18"
+  num_classes:  10
+
+training:
+  epochs:       200
+  optimizer:    "sgd"
+  lr:           0.05         # η₀ for CIFAR-10 (Table S2)
+  momentum:     0.9
+  weight_decay: 5.0e-4
+  scheduler:    "cosine"
+  grad_clip:    5.0
+
+aab_sgn:
+  pi_min:            0.10   # Must be > 0 (Theorem 3); satisfies π*(0.4,0.05,500)≈0.095
+  alpha:             0.30   # η_eff = η₀(1+α·φ̄) ≈ 1.22η₀  [Section 9.0.0.1]
+  kl_threshold:      1.50   # Grid-searched on CIFAR-10 val (Limitation 3)
+  use_adaptive_kl:   true   # Algorithm 1 adaptive threshold
+  diagnostic_samples: 500   # n≥500 for Theorem 1 finite-sample bound
+
+vague_sets:                  # Table S6 / Section 6.1.0.5
+  sigma_S: 0.10
+  c_M:     0.50
+  sigma_M: 0.20
+  c_L:     1.00
+  sigma_L: 1.00
+  w_S:     0.50
+  w_M:     1.00
+  w_L:     1.50
+
+logging:
+  log_interval: 100
+  save_dir:     "./checkpoints"

@@ -1,0 +1,64 @@
+# AAB-SGN Default Configuration
+
+# Dataset configuration
+dataset:
+  name: cifar10
+  data_root: ./data
+  num_classes: 10
+  download: true
+
+# Noise configuration
+noise:
+  type: symmetric  # Options: symmetric, asymmetric, pair_flip
+  rate: 0.4       # Corruption rate (0.0-1.0)
+  seed: 42        # Random seed for noise generation
+
+# Model configuration
+model:
+  architecture: resnet18  # Options: resnet18, resnet34, resnet50
+  pretrained: false
+
+# AAB-SGN parameters
+aab_sgn:
+  # Vague set parameters
+  sigma_S: 0.1    # Minor residual width
+  sigma_M: 0.2    # Moderate residual width
+  sigma_L: 1.0    # Severe residual width
+  
+  # Hesitation and confidence
+  pi_min: 0.1     # Minimum hesitation margin (must be > 0, Theorem 3)
+  alpha: 0.3      # Learning rate scaling factor
+  
+  # Mode selection
+  kl_threshold: null  # Fixed threshold (null for adaptive)
+  sgn_warmup_epochs: 10  # Epochs for SGN stage if two-stage mode
+
+# Training configuration
+training:
+  epochs: 200
+  batch_size: 128
+  num_workers: 4
+  
+  # Optimizer
+  optimizer: sgd
+  lr: 0.1
+  momentum: 0.9
+  weight_decay: 0.0005
+  
+  # Learning rate schedule
+  scheduler: cosine  # Options: cosine, step, multistep
+  
+  # Logging
+  log_interval: 50
+  save_checkpoint: true
+  checkpoint_dir: ./checkpoints
+
+# Hardware
+hardware:
+  gpu: 0
+  seed: 42
+
+# Evaluation
+evaluation:
+  test_batch_size: 256
+  early_stopping_patience: null  # Epochs (null to disable)
