@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Mehreen"
+    given-names: "Ramsha"
+    email: "ramshamehreen2208@gmail.com"
+    orcid: "https://orcid.org/0009-0001-4034-7063"
+  - family-names: "Ramesh"
+    given-names: "Renikunta"
+    email: "rr.mh@kitsw.ac.in"
+    orcid: "https://orcid.org/0000-0002-5731-6618"
+title: "AAB-SGN: Robust Learning Under Label Noise via Hesitation-Aware Gradient Modulation"
+version: 1.0.0
+date-released: 2026-02-15
+url: "https://github.com/[your-org]/AAB-SGN"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Mehreen"
+      given-names: "Ramsha"
+    - family-names: "Ramesh"
+      given-names: "Renikunta"
+  title: "AAB-SGN: Robust Learning Under Label Noise via Hesitation-Aware Gradient Modulation"
+  journal: "Journal of Experimental & Theoretical Artificial Intelligence"
+  year: 2026
+  publisher: "Taylor & Francis"
