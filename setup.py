@@ -8,7 +8,9 @@ setup(
     version="1.0.0",
     author="Ramsha Mehreen, Renikunta Ramesh",
     author_email="ramshamehreen2208@gmail.com",
-    description="AAB-SGN: Robust Learning Under Label Noise via Hesitation-Aware Gradient Modulation",
+    description="Hesitation Margins are Necessary:
+Ambiguity-Aware Backpropagation for Robust
+Learning Under Label Noise",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/[your-org]/AAB-SGN",
