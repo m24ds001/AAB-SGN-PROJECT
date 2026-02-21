@@ -189,7 +189,9 @@ If you use AAB-SGN in your research, please cite:
 
 ```bibtex
 @article{mehreen2026aabsgn,
-  title={AAB-SGN: Robust Learning Under Label Noise via Hesitation-Aware Gradient Modulation},
+  title={Hesitation Margins are Necessary:
+Ambiguity-Aware Backpropagation for Robust
+Learning Under Label Noise},
   author={Mehreen, Ramsha and Ramesh, Renikunta},
   journal={Journal of Experimental \& Theoretical Artificial Intelligence},
   year={2026},
