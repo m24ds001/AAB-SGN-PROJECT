@@ -22,7 +22,9 @@ preferred-citation:
       given-names: "Ramsha"
     - family-names: "Ramesh"
       given-names: "Renikunta"
-  title: "AAB-SGN: Robust Learning Under Label Noise via Hesitation-Aware Gradient Modulation"
+  title: "Hesitation Margins are Necessary:
+Ambiguity-Aware Backpropagation for Robust
+Learning Under Label Noise"
   journal: "Journal of Experimental & Theoretical Artificial Intelligence"
   year: 2026
   publisher: "Taylor & Francis"
