@@ -1,5 +1,6 @@
-"""
-AAB-SGN: Ambiguity-Aware Backpropagation with Symbolic Gradient Modulation
+"""Hesitation Margins are Necessary:
+Ambiguity-Aware Backpropagation for Robust
+Learning Under Label Noise
 
 Core implementation of vague set gradient modulation for robust learning under label noise.
 
