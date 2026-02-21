@@ -12,7 +12,9 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/[your-org]/AAB-SGN.git
+git clone https://github.com/Hesitation Margins are Necessary:
+Ambiguity-Aware Backpropagation for Robust
+Learning Under Label Noise/AAB-SGN.git
 cd AAB-SGN
 
 # Install dependencies
