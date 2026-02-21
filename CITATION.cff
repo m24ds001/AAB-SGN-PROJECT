@@ -9,7 +9,9 @@ authors:
     given-names: "Renikunta"
     email: "rr.mh@kitsw.ac.in"
     orcid: "https://orcid.org/0000-0002-5731-6618"
-title: "AAB-SGN: Robust Learning Under Label Noise via Hesitation-Aware Gradient Modulation"
+title: "Hesitation Margins are Necessary:
+Ambiguity-Aware Backpropagation for Robust
+Learning Under Label Noise"
 version: 1.0.0
 date-released: 2026-02-15
 url: "https://github.com/[your-org]/AAB-SGN"
